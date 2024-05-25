@@ -9,23 +9,22 @@ fun main(args: Array<String>) {
 
 class Solution {
     fun removeElement(nums: IntArray, `val`: Int): Int {
-        val k:Int
+       val k:Int
         for (i in nums.indices){
             if (nums[i] == `val`){
-                nums[i] = 10
+                nums[i] = 1000
             }
         }
 
         nums.sort()
         var count = 0;
         for (i in nums.indices){
-            if (nums[i] != 10){
+            if (nums[i] != 1000){
                 count ++
             }
         }
         k = count
-
-        println("K la :$k")
+        println("$k")
         return k
     }
 }
